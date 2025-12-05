@@ -1,0 +1,142 @@
+.student-list {
+  display: grid;
+  gap: 20px;
+}
+
+.student-card {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.student-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.student-header h2 {
+  color: #667eea;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+.student-email {
+  color: #6c757d;
+  font-size: 1em;
+}
+
+.student-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.student-info {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+}
+
+.info-item {
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.marks-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #e9ecef;
+}
+
+.marks-section h3 {
+  color: #667eea;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.marks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.mark-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.mark-item:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2);
+}
+
+.subject-name {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.mark-score {
+  font-size: 1.2em;
+  color: #667eea;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.mark-percentage {
+  font-size: 0.9em;
+  color: #6c757d;
+  padding: 4px 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .student-header {
+    flex-direction: column;
+  }
+
+  .student-actions {
+    width: 100%;
+  }
+
+  .student-actions .btn {
+    flex: 1;
+  }
+
+  .marks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

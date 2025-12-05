@@ -1,0 +1,180 @@
+.student-form {
+  width: 100%;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.form-header h2 {
+  color: #667eea;
+  font-size: 1.8em;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #6c757d;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #f8f9fa;
+  color: #dc3545;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #495057;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-control:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input:invalid:not(:focus):not(:placeholder-shown),
+.form-group textarea:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #dc3545;
+}
+
+.field-error {
+  display: block;
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.marks-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #e9ecef;
+}
+
+.marks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.marks-header h3 {
+  color: #667eea;
+  font-size: 1.3em;
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.mark-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+/* Exams section has 6 fields, so adjust grid */
+.marks-section:last-of-type .mark-row {
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr auto;
+  gap: 8px;
+}
+
+/* Mark classes work with grid layout in .mark-row */
+/* form-control class provides consistent styling for all inputs */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #e9ecef;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .mark-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+.exams-label-row {
+  font-size: 12px;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.exams-label-row label {
+  display: block;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #495057;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+

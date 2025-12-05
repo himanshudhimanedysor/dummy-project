@@ -1,0 +1,173 @@
+.webhook-manager {
+  width: 100%;
+}
+
+.webhook-manager h2 {
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.webhook-description {
+  color: #6c757d;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.alert {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.alert-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.webhook-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.webhook-input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.webhook-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.webhooks-list h3 {
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+.no-webhooks {
+  text-align: center;
+  color: #6c757d;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.webhook-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.webhook-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.webhook-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.webhook-url {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+.webhook-meta {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.status-badge.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.webhook-date {
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+.webhook-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.webhook-info-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+}
+
+.webhook-info-box h4 {
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+.webhook-info-box pre {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.9em;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+@media (max-width: 768px) {
+  .webhook-form {
+    flex-direction: column;
+  }
+
+  .webhook-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .webhook-actions {
+    width: 100%;
+  }
+
+  .webhook-actions .btn {
+    flex: 1;
+  }
+}
+
