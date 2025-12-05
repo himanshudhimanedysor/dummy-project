@@ -17,7 +17,7 @@ function App() {
 
   const fetchStudents = async () => {
     try {
-      const response = await fetch('/api/students');
+      const response = await fetch('https://dummy-project-backend-production.up.railway.app/api/students');
       const data = await response.json();
       setStudents(data);
       setLoading(false);
@@ -35,7 +35,7 @@ function App() {
   const handleEditStudent = async (student) => {
     // Fetch full student data including exams
     try {
-      const response = await fetch(`/api/students/${student.id}`);
+      const response = await fetch(`https://dummy-project-backend-production.up.railway.app/api/students/${student.id}`);
       const fullStudentData = await response.json();
       setSelectedStudent(fullStudentData);
       setShowForm(true);
@@ -56,7 +56,7 @@ function App() {
   const handleDeleteStudent = async (id) => {
     if (window.confirm('Are you sure you want to delete this student?')) {
       try {
-        await fetch(`/api/students/${id}`, { method: 'DELETE' });
+        await fetch(`https://dummy-project-backend-production.up.railway.app/api/students/${id}`, { method: 'DELETE' });
         fetchStudents();
       } catch (error) {
         console.error('Error deleting student:', error);
