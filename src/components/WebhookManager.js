@@ -15,7 +15,7 @@ function WebhookManager() {
 
   const fetchWebhooks = async () => {
     try {
-      const response = await axios.get('/api/webhooks');
+      const response = await axios.get('https://dummy-project-backend-production.up.railway.app/api/webhooks');
       setWebhooks(response.data);
     } catch (err) {
       console.error('Error fetching webhooks:', err);
@@ -29,7 +29,7 @@ function WebhookManager() {
     setLoading(true);
 
     try {
-      await axios.post('/api/webhooks', { url: newWebhookUrl });
+      await axios.post('https://dummy-project-backend-production.up.railway.app/api/webhooks', { url: newWebhookUrl });
       setNewWebhookUrl('');
       setSuccess('Webhook added successfully!');
       fetchWebhooks();
@@ -42,7 +42,7 @@ function WebhookManager() {
 
   const handleToggleWebhook = async (id, currentStatus) => {
     try {
-      await axios.put(`/api/webhooks/${id}`, { isActive: !currentStatus });
+      await axios.put(`https://dummy-project-backend-production.up.railway.app/api/webhooks/${id}`, { isActive: !currentStatus });
       fetchWebhooks();
     } catch (err) {
       console.error('Error toggling webhook:', err);
@@ -53,7 +53,7 @@ function WebhookManager() {
   const handleDeleteWebhook = async (id) => {
     if (window.confirm('Are you sure you want to delete this webhook?')) {
       try {
-        await axios.delete(`/api/webhooks/${id}`);
+        await axios.delete(`https://dummy-project-backend-production.up.railway.app/api/webhooks/${id}`);
         fetchWebhooks();
       } catch (err) {
         console.error('Error deleting webhook:', err);

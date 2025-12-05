@@ -196,9 +196,9 @@ function StudentForm({ student, onClose, onSave }) {
 
     try {
       if (student) {
-        await axios.put(`/api/students/${student.id}`, payload);
+        await axios.put(`https://dummy-project-backend-production.up.railway.app/api/students/${student.id}`, payload);
       } else {
-        await axios.post('/api/students', payload);
+        await axios.post('https://dummy-project-backend-production.up.railway.app/api/students', payload);
       }
       onSave();
       onClose();
